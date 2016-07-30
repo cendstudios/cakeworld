@@ -1,0 +1,605 @@
+<!--<?php
+//require'classes/cake.php';
+//require'classes/user.php';
+//include'include/connect.php';
+//include'include/session.php';
+//include'include/function.php';
+?>-->
+<!DOCTYPE html>
+<html>
+   <!--<?php //include'include/head.php'; ?>-->
+   <head>
+    <!--<?php
+        //$web_root = "http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])."/";
+        ?>-->
+        <meta charset="UTF-8">
+         <link rel="stylesheet" href="<?php echo $web_root ?>css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+          <meta property="og:image" content='favicon.icon'>
+<link rel='shortcut icon' href='favicon.ico' />
+<link rel='shortcut' href='favicons.ico' />
+        <meta name="author" content="Website title">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Desc"/>
+        <meta name="keywords" content="Keywords"/>
+        
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel="stylesheet" type="text/css" />
+        
+		
+		    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+		
+        <title>Cake World</title>
+        <link rel="icon" href="<?php echo $web_root ?>images/favicon.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="<?php echo $web_root ?>images/favicon.png" type="image/x-icon"/>
+       
+	   
+	   <meta property="og:image" content='favicon.icon'>
+<link rel='shortcut icon' href='favicon.ico' />
+<link rel='shortcut' href='favicons.ico' />
+
+<script type="text/javascript" src="jquery-1.3.2.js">
+</script>
+        
+        <!--<div id="loading_div" class="bg-primary padding_10 font-white border_radius font-sm-3" style="z-index: 99999;position: fixed;left:10px;bottom:10px;">
+       <i class='fa fa-2x fa-spinner fa-spin'></i>
+    </div>-->
+        <script type="text/javascript" src="jquery-1.3.2.js">
+</script>
+<script type="text/javascript" src="jquery-1.9.1.min.js">
+</script>
+        <!--[if lt IE 9]>
+  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+        
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/56361c9995875453661464e4/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+        <script type="text/javascript" src="include/jquery-1.3.2.js">
+</script>
+
+<script type="text/javascript" src="include/jquery-1.9.1.min.js">
+</script>
+
+
+		
+		
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/look_base_v1.css">
+		<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/demo.css">
+        <!-- Pushy CSS -->
+        <link rel="stylesheet" href="css/pushy.css">
+        
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		
+		
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+		
+		<link href='mobilesite.css' rel='stylesheet' type='text/CSS' />
+		
+    <style>
+        
+        #demo_box{
+            width: 480px;
+        }
+        .fa{
+            font-size: 40px;
+            line-height: 70px;
+        }
+        .fa-bars{
+            color: #3498db;
+        }
+        pre{
+            font-family: Consolas,Liberation Mono,Courier,monospace;
+            font-size: 13px;
+        }
+        @media screen and (orientation: portrait){
+            pre{
+                overflow-x: scroll;
+            }
+        }
+    </style>
+		
+    </head>
+   
+   
+    <body>
+
+	<!--<?php //include'include/header1.php'; ?>-->
+        
+		
+	
+<div class="navbar navbar-fixed-top" style="box-shadow: 1px 1px 6px #f7f7f7;">
+<div class=" bg-primary padding_10 font-xs font-weight-800"  >
+   <div class="container" style='height:35px;'>
+	  <div id="demo_box_2" style='float:left; margin-left:-0.8%; margin-top:-2.3%;position:absolute; z-index:1;'>
+            <span class="pop_ctrl"><i class="fa fa-bars"></i></span>
+            <ul id="demo_ul_2" style='position:relative; color:#ffffff;'>
+                <li class="demo_li"><a href="index1.html"><div style='color:#ffffff;'><i class="fa fa-home"></i></div><div style='color:#ffffff;'>Home</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=2"><div><i class="fa"><img src='images/cupcakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Cup Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=1"><div><i class="fa"><img src='images/dessertcakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Dessert Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=3"><div><i class="fa"><img src='images/spongecakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Sponge Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=5"><div><i class="fa"><img src='images/richfruitcakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Richfruit Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=7"><div><i class="fa"><img src='images/weddingcakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Wedding Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=9"><div><i class="fa"><img src='images/birthdaycakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Birthday Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=8"><div><i class="fa"><img src='images/childrencakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Children Cake</div></a></li>
+                <li class="demo_li"><a href="http://www.cakeworld-ng.com/cat.php?c=10"><div><i class="fa"><img src='images/specialcakew.png' style='width:50%; height:50%' /></i></div><div style='color:#ffffff;'>Special Cake</div></a></li>
+            </ul>
+        </div>
+	<div class='col-sm-4 text-center bg-secondary font-lg-2' style='padding:0.1%;position:absolute;margin:auto; text-align:centre; float:left; margin-left:12%;'>
+           
+		   <img src='images/cakelogo.png' style='width:100%; height:100%;' />
+        </div>
+</div>
+</div>
+</div>
+
+       
+
+        <!-- Your Content -->
+        <div id="container">
+		
+		
+		
+		
+			<div class="col-sm-9 no_padding-left animated fadeInDownBig">
+                <!--<?php //include'include/slider.php'; ?>-->
+				
+				<!-- -->
+				 <div class='slider'>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+    
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/slide_1.jpg" alt="First slide">
+          
+        </div> 
+           
+          <div class="item">
+          <img src="images/slide_3.jpg" alt="First slide">
+          
+        </div>
+          
+          <div class="item">
+          <img src="images/slide_2.jpg" alt="First slide">
+          
+        </div> 
+          
+          
+          <div class="item">
+          <img src="images/slide_4.jpg" alt="First slide">
+          
+        </div>
+          
+         
+      </div>
+       
+      
+      
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+            </div> 
+          </div>
+		  <!-- -->
+            </div>
+            
+            <div class="col-sm-3 no_padding animated fadeInRightBig">
+            
+                <div class="box-single margin_5-bottom font-xs clearfix">
+                    
+                <div class="col-xs-2 text-center">
+                <i class="fa fa-lock fa-3x text-primary"></i>
+                </div>
+                 <div class="col-xs-10">
+                     <p class="no_margin-bottom font-weight-700">SAFE & SECURE</p>
+                     <p class="no_margin-bottom">100% safety guaranteed</p>
+                </div>
+                </div> 
+                    
+                <div class="box-single margin_5-bottom font-xs clearfix">
+                    
+                    
+                <div class="col-xs-2 text-center">
+                <i class="fa fa-truck fa-3x text-primary"></i>
+                </div>  
+                 <div class="col-xs-10">
+                     <p class="no_margin-bottom font-weight-700">DELIVERY</p>
+                     <p class="no_margin-bottom">We offer quick and responsible delivery service for your cakes</p>
+                </div>
+                    
+                </div>
+            
+            
+                <div class="box-single margin_5-bottom font-xs clearfix">
+                    
+                    
+                <div class="col-xs-2 text-center">
+                <i class="fa fa-certificate fa-3x text-primary"></i>
+                </div>
+                 <div class="col-xs-10">
+                     <p class="no_margin-bottom font-weight-700">EXCELLENT SUPPORT</p>
+                     <p class="no_margin-bottom">Our customer support is always ready to attend to your enquiries.</p>
+                </div>
+                    
+                </div>
+                
+                <!--<?php
+                //if($master_id)
+                //{
+                    
+                //}else
+                //{ ?>-->
+                <!--<div class="box-single bg-secondary font-white margin_5-bottom font-xs clearfix">
+                    
+                    
+                <div class="col-xs-2 text-center">
+                <i class="fa fa-user fa-3x "></i>
+                </div>
+                 <div class="col-xs-10">
+                     <p class="no_margin-bottom  font-sm-4 font-weight-500">New to Cake World?</p>
+                     <a href='' class='btn btn-primary font-white'>Sign up</a>
+                     <a href='' class='btn  btn-primary font-white'>Sign In</a>
+                     
+                </div>
+                    
+                </div>-->
+                <!--<?php
+                }
+                ?>-->
+            
+            </div>
+            
+            
+            <div class="clearfix "></div>
+			
+			
+			
+			
+			
+			
+			<div id="containsalewide">
+						
+						<div id="containfactbox">
+						<a href='http://www.cakeworld-ng.com/cat.php?c=2'><img src='images/cupcakem.png' style='width:100%; height:100%' /></a>
+						</div>			
+						
+						
+						
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=1'><img src='images/dessertcakem.png' style='width:100%; height:100%' /></a>
+						</div>
+						
+						
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=3'><img src='images/spongecakem.png' style='width:100%; height:100%' /></a>
+						</div>
+						</div>
+						
+						<div class="clearfix "></div>
+						
+						
+						<div id='containsalewide'>
+
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=7'><img src='images/weddingcakem.png' style='width:100%; height:100%' /></a>
+						</div>			
+						
+						
+						
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=9'><img src='images/birthdaycakem.png' style='width:100%; height:100%' /></a>
+						</div>
+						
+						
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=8'><img src='images/childrencakem.png' style='width:100%; height:100%' /></a>
+						</div>
+						</div>
+						
+						<div class="clearfix "></div>
+						
+						<div id='containsalewide'>
+
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=5'><img src='images/richfruitcakem.png' style='width:100%; height:100%' /></a>
+						</div>			
+						
+						
+						
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/cat.php?c=10'><img src='images/specialcakem.png' style='width:100%; height:100%' /></a>
+						</div>
+						
+						
+						<div id='containfactbox'>
+						<a href='http://www.cakeworld-ng.com/custom.php'><img src='images/customcakem.png' style='width:100%; height:100%' /></a>
+						</div>
+						<div class='separator'></div>
+						</div>
+										
+
+					<div class="clearfix "></div>
+            
+            
+            <div class='bottom_buffer animated fadeInLeft'>
+                <!--<?php //include'include/social.php'; ?>-->
+				
+				          <div  class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+    
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href='http://facebook.com/CakeWorldNigeria' target='_blank'><img src="images/facebook-so.jpg" alt="First slide"></a>
+          
+        </div> 
+          <div class="item">
+            <a href='http://twitter.com/CakeWorldNg' target='_blank'><img src="images/twitter-so.jpg" alt="First slide"></a>
+          
+        </div> 
+          <div class="item">
+            <a href='http://instagram.com/CakeWorldNigeria' target='_blank'><img src="images/instagram-so.jpg" alt="First slide"></a>
+          
+        </div> 
+           
+          
+         
+      </div>
+      
+            </div> 
+          
+				
+				<!-- -->
+            </div>
+            
+           
+            
+            <div class="clearfix bottom_buffer"></div>
+			
+
+
+ <div class='row animated fadeInUpBig'>
+            <div class='col-sm-3'>
+                
+                <a href='http://www.cakeworld-ng.com/custom.php'>    <div class='short_sect'>
+                    
+                    <div class='bg'><img src='images/bg1.jpg'></div>
+                    
+                 
+                    </div></a>
+                
+            </div>
+                <div class='col-sm-6'>
+                
+              <a href='cat.php'>  <div class='short_sect'>
+                    
+                    <div class='bg'><img src='images/bg3.jpg'></div>
+                    
+                 
+                  </div></a>
+                
+            </div>
+                <div class='col-sm-3'>
+                
+                    <a href='http://www.cakeworld-ng.com/trending.php'> <div class='short_sect'>
+                    
+                    <div class='bg'><img src='images/bg2.jpg'></div>
+                    
+                 
+                </div></a>
+                
+            </div>
+            </div>
+			
+			
+			<div class="clearfix bottom_buffer"></div>
+			
+			        
+			
+		
+		<div class='credit-box'>
+                
+                <p class='bottom_buffer'>
+                    Cake World offers free delivery service to areas in Lekki Phase One. Deliveries to locations outside these areas would be charged.
+                </p>
+                
+                
+                <p class='bottom_buffer'>
+                    Do you have a special cake design that you would love us to make for you? You can share this image with us and we are sure we will be up to the task. <b>Order for a special cake</b> design today.
+                </p>
+        </div>
+       
+		
+		
+		
+		
+		
+            <div class='separator'></div>
+        
+        
+        
+        
+        
+            
+        
+		
+        <!--<?php //include'include/footer.php'; ?>-->
+		
+		<div style='background:#333' class='font-white'>
+    <div class='container padding_20'>
+    
+        <div class='col-sm-8'>
+        <h2 class='font-light no_margin-bottom'>Cake World</h2>
+        <p class='font-gray'>It's Celebration time</p>
+        
+        <p class='font-xs font-gray'>Whether it’s the wedding of your dreams, a birthday celebration, an office party, or just to say I love you, At Cake World its always CELEBRATION TIME! Cake World’s custom and ready-made cakes fit every occasion. </p>
+        
+        <div class='top_buffer'>
+        <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-facebook fa-stack-1x"></i>
+</span>
+        <span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
+</span>
+        </div>
+        <p class='font-xs font-gray top_buffer'>&copy; 2015. Cake World All Rights Reserved. <a href='http://cakeworldng.com/webmail' target='_blank'><i class='fa fa-fw fa-2x fa-envelope'></i></a> </p>
+        </div>
+        <div class='col-sm-4'>
+<!--            <ul class='foot-links'>
+                <li><a href=''>About us</a></li>
+                
+            </ul>-->
+            
+            <address class="font-gray">
+                Cake World Nigeria. 26B Fola Osibo, Lekki Phase 1, Lagos - Nigeria.
+                +2348034031631 • +2348126282449 • +23414539081
+            </address>
+            
+            <img src="images/interswitch.png" class="img-responsive" style="max-width: 150px">
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign in to continue</h4>
+      </div>
+        <form id='loginform'>
+      <div class="modal-body">
+        
+          
+              <div class='form-group'>
+                  <input type='text' id='signin_email' name='signin email' placeholder='Email address' class='form-control'>
+              </div>
+              <div class='form-group'>
+                  <input type='password' id='signin_password' name='signin password' placeholder='Password' class='form-control'>
+              </div>
+              
+          
+      </div>
+      <div class="modal-footer">
+          <a href="recover">Recover password</a>
+         <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+        </form>
+          
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Sign up</h4>
+      </div>
+        <form id='signupform'>
+      <div class="modal-body">
+        
+          <div class="row">
+          <div class='form-group col-sm-6'>
+                  <input type='text' id="signup_first_name" name="signup first name" placeholder='First name' class=' form-control'>
+          </div>
+          <div class='form-group col-sm-6'>
+                  <input type='text' id="signup_last_name" name="signup last name" placeholder='Last name' class='form-control'>
+         </div>
+          
+              
+              <div class='form-group col-sm-12'>
+                  <input type='text' id="signup_email" name="signup email" placeholder='Email address' class='form-control'>
+              </div>
+              <div class='form-group col-sm-12'>
+                  <input type='text' id="signup_phone" name="signup phone" onkeypress="return isNumber(event);" placeholder='Phone number' class='form-control'>
+              </div>
+              <div class='form-group col-sm-12'>
+                  <input type='password' id="signup_password" name="signup password" placeholder='Password' class='form-control'>
+              </div>
+              <div class='form-group col-sm-12'>
+                  <input type='password' id="signup_confirm_password" name="signup confirm password" placeholder='Confirm Password' class='form-control'>
+              </div>
+              
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Sign up</button>
+      </div>
+            </form>
+          
+    </div>
+  </div>
+</div>
+		
+		<!-- -->
+        <!--<?php include'include/script.php'; ?>
+        <?php include'include/validation.php'; ?>-->
+        </div>
+
+        
+
+         <script src="lib/jquery/jquery.min.js"></script>
+    <script src="src/jquery.popmenu.js"></script>
+    <script>
+        $(function(){
+            $('#demo_box').popmenu();
+            $('#demo_box_2').popmenu({'background':'#f48121','focusColor':'#2ab9b2','borderRadius':'0'});
+            $('#demo_box_3').popmenu({'width': '200px', 'background':'#223','focusColor':'#ee5','borderRadius':'10px', 'top': '70', 'left': '-40', 'color':'#1265fe','border':'3px solid #0035fe'});
+        })
+    </script>
+	
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+	
+    </body>
+    
+</html>
