@@ -1,0 +1,436 @@
+/*!
+ * Look Base v1.0.0 (http://nxtgendesign.com/look)
+ * Copyright 2014 Nxtgendesign, Inc.
+ * Licensed under MIT
+ */
+@font-face {
+  font-family: 'satisfy';
+  font-style: normal; 
+  font-weight: bold;
+  src: local('satisfy'), url('../fonts/satisfy.ttf') format('truetype');
+}
+
+body
+{
+     letter-spacing: .03em !Important;
+    font-weight: normal !Important;
+        -webkit-font-smoothing: antialiased;
+             -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+.bg-primary
+{
+    background: #f38020 !Important;
+}
+.bg-secondary
+{
+    background: #2ab9b2 !Important;
+}
+textarea:hover, 
+input[type=text]:hover, 
+textarea:active, 
+input[type=text]:active, 
+textarea:focus, 
+input[type=text]:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none !Important;
+    -webkit-box-shadow: none !Important;
+    box-shadow: none !Important;
+}
+.text-primary, a
+{
+     color: #f38020 !Important;
+}
+.text-secondary
+{
+    color: #2ab9b2 !Important;
+}
+hr.item_line
+{
+    border:none;
+    border-top:3px solid #ccc;
+    margin: 5px 30px;
+}
+ul
+{
+    padding: 0 !Important;
+    list-style: none !Important;
+    margin: 0 !Important;
+}
+.top_nav li
+{
+    
+    display: inline-block;
+    padding: 0 10px;
+    border-right:1px solid gainsboro;
+}
+ .btn-primary
+ {
+     background: #f38020 !Important;
+     border:none !Important;
+     
+ }
+ .search_box
+ {
+     background: #f5f5f5 !Important;
+     border: none !Important;
+      padding: 20px !Important;
+     border-radius: 0 !Important;
+ }
+.top_nav li:last-child
+{
+    border-right:none;
+}
+.navbar-brand img
+{
+    max-width: 80px;
+    margin-top: -.7em;
+}
+.cart_drop_menu
+{
+    border:3px solid #f38020 !Important;
+    min-width: 30em !Important;
+    left:auto !Important;
+    right:0 !Important;
+}
+#cat_drop
+{
+    min-width: 20em !Important;
+}
+#navigation
+{
+    background: #2ab9b2 !Important;
+}
+#navigation li a
+{
+    color:white !Important;
+    text-transform: uppercase;
+    padding: 15px 22px !Important;
+    font-size:.92em !Important;
+    font-weight: 500;
+}
+#navigation li.active a
+{
+    background: #f38020 !Important;
+}
+
+
+.box-single
+{
+    background: #f6f6f6;
+    padding: 10px;
+}
+
+.slider
+{ 
+    
+    height:23em !important; 
+    overflow: hidden;
+}
+#myCarousel .carousel-inner .item img
+{
+    animation:move 20s linear !Important; /* Change this to alternate to stop the loop. */
+  -ms-animation:move 20s linear !Important;
+  -webkit-animation:move 20s linear !Important;
+  -o-animation:move 20s linear !Important;
+  -moz-animation:move 20s linear !Important;
+}
+@-webkit-keyframes move {
+  from {
+  	transform: scale(1);
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari and Chrome */
+    -o-transform: scale(1); /* Opera */
+    -moz-transform: scale(1); /* Firefox */
+  }
+  to {
+  	transform: scale(1.15);
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(1.15); /* Safari and Chrome */
+    -o-transform: scale(1.15); /* Opera */
+    -moz-transform: scale(1.15); /* Firefox */
+  }
+}
+.carousel-control {
+    left: 12px;
+    top:20vh !Important;
+    width: 0px !Important;
+    height: 0px ;
+    padding: 30px 30px !Important;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    color:white !Important;
+    line-height: 30px;
+    background: rgba(0,0,0,.4) !important;
+    border: none;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 0;
+    
+}
+
+.carousel-control.left
+{
+    border-left: none !Important;
+}
+.carousel-control.right
+{
+    border-right: none !Important;
+}
+
+
+.inside_carousel .carousel-control {
+    background: #f38020 !Important;
+    top:17vh !Important;
+    width:0px !Important;
+    height: 0px !Important;
+    padding: 20px 20px !Important;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    color:white !Important;
+    border: none;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 0;
+    
+}
+
+.inside_carousel .carousel-control.left
+{
+    border-left: none !Important;
+    left:auto !Important;
+    right: -45px !Important;
+}
+.inside_carousel .carousel-control.right
+{
+    border-right: none !Important;
+    margin-top: 22px;
+    right: -45px !Important;
+}
+
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.carousel-caption
+{
+    -webkit-animation: fadeInUpBig 2s;
+    width: 100% !Important;
+    bottom:0 !Important;
+    left:0 !Important;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,0.65+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+.showslide_tab
+{
+    border: none;
+    width: 100%;
+}
+.showslide_tab > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.showslide_tab>li>a {
+    border:1px solid gainsboro !Important;
+    font-weight: 700 !Important;
+    border-radius:0 !important;
+    padding: 40px 30px ;
+   font-size:1.35em;
+  
+  margin: 0 !Important;
+text-align: center !Important;
+  color:#777 !important;
+}
+.showslide_tab>li.active>a, .showslide_tab>li.active>a:hover, .showslide_tab>li.active>a:focus {
+  background: #f38020 !important;
+  color:#fff !important;
+}
+
+
+.sect:nth-of-type(1) .heading
+{
+    background: #c6256c !Important;
+    
+}
+.sect:nth-of-type(2) .heading
+{
+    background: #175a71 !Important;
+    
+}
+.sect:nth-of-type(3) .heading
+{
+    background: #1c85c2 !Important;
+    
+}
+.sect:nth-of-type(4) .heading
+{
+    background: #a5b839 !Important;
+    
+}
+.sect:nth-of-type(5) .heading
+{
+    background: #f38020 !Important;
+    
+}
+.sect:nth-of-type(6) .heading
+{
+    background: #c12e2a !Important;
+    
+}
+.sect:nth-of-type(7) .heading
+{
+    background: #a6e1ec !Important;
+    
+}
+.sect:nth-of-type(8) .heading
+{
+    background: #25c38b !Important;
+    
+}
+.sect:nth-of-type(9) .heading
+{
+    background: #8544c4 !Important;
+    
+}
+.sect:nth-of-type(10) .heading
+{
+    background: #3b3872 !Important;
+    
+}
+.sect:nth-of-type(11) .heading
+{
+    background: #20943f !Important;
+    
+}
+.sect:nth-of-type(12) .heading
+{
+    background: #54bf97 !Important;
+    
+}
+.sect:nth-of-type(13) .heading
+{
+    background: #a2c7c2 !Important;
+    
+}
+.sect:nth-of-type(14) .heading
+{
+    background: #391628 !Important;
+    
+}
+.foot-links
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.foot-links li
+{
+    border-bottom: 1px solid #555;
+    padding: 5px;
+}
+.foot-links li a
+{
+    color:gainsboro !Important;
+}
+.credit-box a
+{
+    color: inherit !Important;
+}
+.short_sect
+{
+    height:260px;
+    overflow: hidden;
+}
+.short_sect .bg
+{
+    position: relative;
+}
+.short_sect .det
+{
+    border-radius: 100%;
+    padding: 20px;
+    text-align: center;
+    top:20%;
+    text-transform: uppercase;
+    left: 11.5%;
+    height:150px;
+    width: 150px;
+    background: white;
+    position: absolute;
+    z-index: 99;
+    font-weight: 700;
+}
+.short_sect .det p
+{
+    font-size: 100%;
+}
+.cake_item
+{
+    border:2px solid white;
+    min-height: 30em;
+    margin-bottom: 10px;
+}
+.cake_item:hover
+{
+    border-color: gainsboro !Important;
+}
+.cake_item .purchase_btn
+{
+    visibility: hidden;
+}
+.cake_item:hover .purchase_btn
+{
+    visibility: visible;
+}
+.title
+{
+    border-bottom: 1px solid gainsboro;
+    width: 100% !Important;
+    overflow: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title h4
+{
+    
+    border:1px solid gainsboro;
+    border-bottom:none;
+    margin: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    width: auto !Important;
+    display: inline-block !Important;
+}
+
+.select
+{
+     background: transparent;
+     height: 34px;
+    width:100%;
+    padding: 5px;
+    border-radius: 0;
+    outline:none;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
