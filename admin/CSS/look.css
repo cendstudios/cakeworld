@@ -1,0 +1,99 @@
+body, div, p, a
+{
+    font-weight:400 !Important;
+}
+.bg-primary
+{
+    background: #f38020 !Important;
+}
+.bg-secondary
+{
+    background: #2ab9b2 !important;
+}
+.big_img
+{
+    animation:rotater 10s linear infinite; /* Change this to alternate to stop the loop. */
+  -ms-animation:rotater 10s linear infinite;
+  -webkit-animation:rotater 10s linear infinite;
+  -o-animation:rotater 10s linear infinite;
+  -moz-animation:rotater 10s linear infinite;
+    width: 80%;
+    margin-top:70px;-webkit-filter: opacity(.4);
+    filter: opacity(.4);
+}
+
+@-webkit-keyframes rotater
+{
+    0% {
+         -webkit-transform: rotateY( 0deg );
+  transform: rotateY( 0deg );
+    }
+    50% {
+         -webkit-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+    }
+    100% {
+         -webkit-transform: rotateY( 0deg );
+  transform: rotateY( 0deg );
+    }
+}
+
+.sidebar
+{
+    position: fixed;
+    height:100%;
+    width:26.2vw;
+}
+#content
+{
+    padding: 20px;
+}
+.mytimeline
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   border-left:3px solid gray !important;
+}
+.mytimeline li
+{
+    
+    text-align:left;
+    padding: 10px 10px 10px 15px;
+    
+}
+.mytimeline li .border
+{
+    width: 15px;
+    height:15px;
+    position: absolute;
+    left:24px;
+    border-radius: 100%;
+    margin: auto;
+    background: gray;
+}
+#pending_today
+{
+    max-height:40em;
+    
+    overflow: auto !Important;
+}
+
+.navbar-nav li a
+{
+    color:White !Important;
+}
+.navbar-nav li.active a
+{
+    background: #f6a662 !Important;
+}
+.dropdown li a, .dropdown .dropdown-menu li a
+{
+    background: white !important;
+    color:#000 !Important;
+}
+
+.dropdown .dropdown-menu li:hover a
+{
+    background: gainsboro !Important;
+}
