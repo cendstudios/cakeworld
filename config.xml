@@ -13,7 +13,7 @@
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-        cendstudios
+        Cendstudios
     </author>
 
     <!-- Define the main entry-point to the application -->
@@ -23,6 +23,8 @@
     <preference name="DisallowOverscroll"         value="true" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
+	
+	<preference name="SplashScreenDelay" value="10000" />
 
     <!-- Define a specific version of PhoneGap to build into your app. -->
     <!-- <preference name="phonegap-version"       value="cli-6.0.0" /> -->
@@ -138,10 +140,10 @@
 	
 	<preference name="SplashScreenDelay" value="10000" />
 	
-	<preference name="FadeSplashScreenDuration" value="750"/>
+	<!--<preference name="FadeSplashScreenDuration" value="750"/>
 	
 	
-	<preference name="AutoHideSplashScreen" value="true" />
+	<preference name="AutoHideSplashScreen" value="true" />-->
 
     <!--
         Define access to external domains.

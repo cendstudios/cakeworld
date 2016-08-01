@@ -600,6 +600,18 @@ s0.parentNode.insertBefore(s1,s0);
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+		
+		navigator.splashscreen.show();
+window.setTimeout(function () {
+    navigator.splashscreen.hide();
+}, splashDuration - fadeDuration);
+
+		
+		document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    window.open = cordova.InAppBrowser.open;
+}
+		
     </script>
 	
     </body>
